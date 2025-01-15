@@ -1,6 +1,17 @@
 <html>
     <body>
         <input type="text"></input>
-        <button>Add todo!</button>
+        <button onclick="addtodo()">Add todo!</button>
     </body>
+    <script>
+        function addtodo(){
+            const el=document.querySelector("input");
+            const value=el.value;
+
+            const newel=document.createElement("div");
+            newel.innerHTML=value;
+            
+            document.querySelector("body").appendChild(newel);
+        }
+    </script>
 </html>
